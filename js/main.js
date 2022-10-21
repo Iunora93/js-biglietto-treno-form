@@ -6,9 +6,7 @@ const discountOver = 65;
 let lastPrice = ``;
 console.log(discountUnder, discountOver, lastPrice);
 
-
-
-const btnGenerator = document.getElementById("btn-generator").value;
+const btnGenerator = document.getElementById("btn-generator");
 console.log(btnGenerator);
 
 btnGenerator.addEventListener(`click`, function(){
@@ -39,13 +37,17 @@ console.log(discountOverAge);
 /* Applichiamo lo sconto */
 if (age < discountUnder){
     lastPrice = firstPrice - underPrice;
-} else if (age > overPriceAge){
+} else if (age > discountOver){
     lastPrice = firstPrice - overPrice;
 } else {
     lastPrice = firstPrice - 0;
 }
 lastPrice = lastPrice.toFixed(2);
 console.log(lastPrice);
+
+document.querySelector("name-surname").innerHTML = nomeCognome;
+document.querySelector("km-browser").innerHTML = kmTrip;
+
 });
 
 
