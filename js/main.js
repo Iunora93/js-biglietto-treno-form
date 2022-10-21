@@ -23,29 +23,28 @@ const age = document.getElementById("age").value;
 console.log(age);
 
 /* il prezzo del biglietto è definito in base ai km (0.21 € al km) */
-let tripCostKm = 0.21;
+let tripCostKm = kmTrip * 0.21;
 console.log(tripCostKm);
-let firstPrice = kmTrip * tripCostKm;
-console.log(firstPrice);
+/* let firstPrice = kmTrip * tripCostKm;
+console.log(firstPrice); */
 
 /* Prezzo finale scontato in base alla fascia di età */
-let discountUnderAge = (firstPrice * 20) / 100;
+/* let discountUnderAge = (firstPrice * 20) / 100;
 console.log(discountUnderAge);
 let discountOverAge = (firstPrice * 40) / 100;
-console.log(discountOverAge);
+console.log(discountOverAge); */
 
 /* Applichiamo lo sconto */
-if (age < discountUnder){
-    lastPrice = firstPrice - underPrice;
-} else if (age > discountOver){
-    lastPrice = firstPrice - overPrice;
+if (age < 18){
+    tripCostKm = tripCostKm - tripCostKm * 0.2;
+} else if (age > 65){
+    tripCostKm = tripCostKm - tripCostKm * 0.4;
 } 
-/* lastPrice = lastPrice.toFixed(2); */
-console.log(lastPrice);
+tripCostKm = tripCostKm.toFixed(2);
+console.log(tripCostKm);
 
 document.querySelector(".name-surname").innerHTML = nomeCognome.value;
-document.querySelector(".km-browser").innerHTML = kmTrip;
-document.querySelector(".fascia-eta").innerHTML = age;
+document.querySelector(".fascia-eta").innerHTML = tripCostKm;
 
 });
 

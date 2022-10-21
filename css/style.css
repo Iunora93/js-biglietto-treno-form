@@ -6,3 +6,32 @@ box-sizing: border-box;
 padding: 0;
 margin: 0;
 }
+
+body {
+    background-color: brown;
+}
+.container-info-btn {
+    background-color: white;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 50px;
+}
+
+.container {
+    padding: 100px 100px;
+}
+
+.container-btn {
+    padding-bottom: 100px;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-top: 300px;
+    max-width: 1200px;
+    border-radius: 50px;
+}
+
