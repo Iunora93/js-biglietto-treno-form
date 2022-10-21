@@ -40,11 +40,12 @@ if (age < discountUnder){
 } else if (age > discountOver){
     lastPrice = firstPrice - overPrice;
 } 
-lastPrice = lastPrice.toFixed(2);
+/* lastPrice = lastPrice.toFixed(2); */
 console.log(lastPrice);
 
-document.querySelector("name-surname").innerHTML = nomeCognome;
-document.querySelector("km-browser").innerHTML = kmTrip;
+document.querySelector(".name-surname").innerHTML = nomeCognome.value;
+document.querySelector(".km-browser").innerHTML = kmTrip;
+document.querySelector(".fascia-eta").innerHTML = age;
 
 });
 
