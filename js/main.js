@@ -6,7 +6,13 @@ const discountOver = 65;
 let lastPrice = ``;
 console.log(discountUnder, discountOver, lastPrice);
 
-/* Chiedi all'utente il suo nome e cognome */
+
+
+const btnGenerator = document.getElementById("btn-generator").value;
+console.log(btnGenerator);
+
+btnGenerator.addEventListener(`click`, function(){
+    /* Chiedi all'utente il suo nome e cognome */
 const nomeCognome = document.getElementById("name");
 console.log(nomeCognome);
 
@@ -17,13 +23,6 @@ console.log(kmTrip);
 /* Chiedi all'utente la sua età */
 const age = document.getElementById("age").value;
 console.log(age);
-
-const btnGenerator = document.getElementById("btn-generator").value;
-console.log(btnGenerator);
-
-btnGenerator.addEventListener(`click`, function(){
-    
-});
 
 /* il prezzo del biglietto è definito in base ai km (0.21 € al km) */
 let tripCostKm = 0.21;
@@ -47,6 +46,9 @@ if (age < discountUnder){
 }
 lastPrice = lastPrice.toFixed(2);
 console.log(lastPrice);
+});
+
+
 
 
 
