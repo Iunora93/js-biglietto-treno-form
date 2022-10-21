@@ -7,7 +7,7 @@ let lastPrice = ``;
 console.log(discountUnder, discountOver, lastPrice);
 
 /* Chiedi all'utente il suo nome e cognome */
-const nomeCognome = document.getElementById("name").value;
+const nomeCognome = document.getElementById("name");
 console.log(nomeCognome);
 
 /* Chiedi all'utente i km da percorrere*/
@@ -22,7 +22,7 @@ const btnGenerator = document.getElementById("btn-generator").value;
 console.log(btnGenerator);
 
 btnGenerator.addEventListener(`click`, function(){
-
+    
 });
 
 /* il prezzo del biglietto è definito in base ai km (0.21 € al km) */
