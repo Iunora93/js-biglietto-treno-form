@@ -39,9 +39,7 @@ if (age < discountUnder){
     lastPrice = firstPrice - underPrice;
 } else if (age > discountOver){
     lastPrice = firstPrice - overPrice;
-} else {
-    lastPrice = firstPrice - 0;
-}
+} 
 lastPrice = lastPrice.toFixed(2);
 console.log(lastPrice);
 
