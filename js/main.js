@@ -1,55 +1,44 @@
 "use strict";
 
 /* Informazioni utili */
-const underPriceAge = 18;
-const overPriceAge = 65;
+const discountUnder = 18;
+const discountOver = 65;
 let lastPrice = ``;
-console.log(underPriceAge, overPriceAge, lastPrice);
+console.log(discountUnder, discountOver, lastPrice);
 
 /* Chiedi all'utente il suo nome e cognome */
-/* let userName = document.getElementById("username").value;
-console.log(userName); */
+const nomeCognome = document.getElementById("name").value;
+console.log(nomeCognome);
 
-const btnGenerator = document.getElementById("btn-generator");
-const nameGenerator = document.getElementById("fname");
-const kmGenerator = document.getElementById("km-lenght");
-const ageGenerator = document.getElementById("age");
-/* console.log(nameGenerator);
-console.log(kmGenerator);
-console.log(ageGenerator); */
-
-
-
-btnGenerator.addEventListener(`click`, function(){
-    console.log(nameGenerator);
-    console.log(kmGenerator);
-    console.log(ageGenerator);
-});
-
-document.getElementById("fname, km-lenght, age")
-
-/* Chiedi all'utente il numero di chilometri che vuole percorrere */
-let tripLenght = prompt(`Inserisci i km del tuo percorso`)
-console.log(tripLenght);
+/* Chiedi all'utente i km da percorrere*/
+const kmTrip = Number (document.getElementById("km").value);
+console.log(kmTrip);
 
 /* Chiedi all'utente la sua età */
-let age = Number(prompt(`Inserisci la tua età`));
-console.log(age)
+const age = document.getElementById("age").value;
+console.log(age);
+
+const btnGenerator = document.getElementById("btn-generator").value;
+console.log(btnGenerator);
+
+btnGenerator.addEventListener(`click`, function(){
+
+});
 
 /* il prezzo del biglietto è definito in base ai km (0.21 € al km) */
 let tripCostKm = 0.21;
 console.log(tripCostKm);
-let firstPrice = tripLenght * tripCostKm;
+let firstPrice = kmTrip * tripCostKm;
 console.log(firstPrice);
 
 /* Prezzo finale scontato in base alla fascia di età */
-let underPrice = (firstPrice * 20) / 100;
-console.log(underPrice);
-let overPrice = (firstPrice * 40) / 100;
-console.log(overPrice);
+let discountUnderAge = (firstPrice * 20) / 100;
+console.log(discountUnderAge);
+let discountOverAge = (firstPrice * 40) / 100;
+console.log(discountOverAge);
 
 /* Applichiamo lo sconto */
-if (age < underPriceAge){
+if (age < discountUnder){
     lastPrice = firstPrice - underPrice;
 } else if (age > overPriceAge){
     lastPrice = firstPrice - overPrice;
@@ -58,4 +47,6 @@ if (age < underPriceAge){
 }
 lastPrice = lastPrice.toFixed(2);
 console.log(lastPrice);
+
+
 
