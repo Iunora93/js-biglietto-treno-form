@@ -8,11 +8,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <form action="/action_page.php">
+        <label for="question">Nome e cognome</label>
+        <input type="text" id="fname" name="fname"><br><br>
+
+        <label for="question">Km da percorrere</label>
+        <input type="text" id="km-lenght" name="km-lenght"><br><br>
+        
+        <label for="question">Fascia d'età</label>
+        <input type="text" id="age" name="age"><br><br>
+
+        <input type="button" id="btn-generator" value="Genera">
+        <input type="button" id="btn-cancel" value="Annulla">
+      </form>
+
     <script src="js/main.js"></script>
 </body>
 </html>
 
-Descrizione:
+<!-- Descrizione:
 Scrivere un programma che chieda all’utente:
 - Il numero di chilometri da percorrere
 - Età del passeggero
@@ -25,4 +39,4 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
 MILESTONE 2:
 Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
 Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca.
-Attenzione se utilizzate il tag form, i button all'interno devono avere il type="button"
+Attenzione se utilizzate il tag form, i button all'interno devono avere il type="button" -->
